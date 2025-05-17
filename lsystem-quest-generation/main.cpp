@@ -7,6 +7,7 @@
 #include "LSystem.h"
 #include "TaskTokenLibrary.h"
 
+
 void ProceedGenerationLogged(
     std::vector<std::shared_ptr<LToken>> axiom,
     int depth,
@@ -118,7 +119,6 @@ int main() {
         std::cout << "Unknown run";
         return 69;
     }
-
 
     return 0;
 }
