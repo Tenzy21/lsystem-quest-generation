@@ -399,3 +399,41 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+#################################
+# Unreal Engine Generated Files #
+#################################
+/LSystemSample/[Bb]uild
+/LSystemSample/[Bb]uilds
+/LSystemSample/Binaries
+/LSystemSample/DerivedDataCache
+/LSystemSample/Intermediate
+/LSystemSample/Saved
+
+#################################
+# Visual Studio Generated Files #
+#################################
+# Cache Directory
+.vs
+# User Specific Files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+# CPP Cache Files
+*.VC.db
+*.opendb
+*.opensdf
+*.sdf
+# Solution Files
+*.sln
+# VSCode Cache Directory
+.vscode
+# VSCode History Files
+**/.history
+
+#################################
+# Miscellaneous Generated Files #
+#################################
+# ADD AS NEED BE
