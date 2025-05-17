@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "LRuleData.generated.h"
 
+
 USTRUCT(BlueprintType)
 struct LSYSTEMSAMPLE_API FLRuleData : public FTableRowBase
 {
