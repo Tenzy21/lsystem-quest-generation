@@ -20,5 +20,11 @@ struct LSYSTEMSAMPLE_API FPlayerContext
     int32 Level;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
+    int32 Exp;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
+    int32 Money;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
     FString CurrentLocation;
 };
