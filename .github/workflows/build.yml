@@ -31,7 +31,7 @@ jobs:
 
     - name: Check Unreal Project File
       run: |
-        if not exist LSystemSample/LSystemSample.uproject (
-          echo "Error: Unreal project file not found!"
+        if (-Not (Test-Path "LSystemSample/LSystemSample.uproject")) {
+          Write-Error "Error: Unreal project file not found!"
           exit 1
-        )
+        }
