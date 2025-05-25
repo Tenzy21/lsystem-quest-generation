@@ -110,7 +110,7 @@ TArray<FLRuleData> ULSystem::GetRulesForToken(const FString& InputToken)
 
 void ULSystem::ProceedGeneration(TArray<FString> Axiom, int32 Depth, const FPlayerContext& Context, TArray<FString>& Result)
 {
-    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Test debug"));
+    GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, TEXT("LSystem message: Generation started"));
 
     if (!RuleDataTable)
     {
@@ -131,7 +131,7 @@ void ULSystem::ProceedGeneration(TArray<FString> Axiom, int32 Depth, const FPlay
 
         TArray<FString> NewAxiom;
         for (const auto Token : Result) {
-            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Magenta, TEXT("Proceeded Token: " + Token));
+            GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, TEXT("LSystem message: Proceeded Token - " + Token));
 
             bool RuleApplied = false;
             TArray<FLRuleData> Rules = GetRulesForToken(Token);

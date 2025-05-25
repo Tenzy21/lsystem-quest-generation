@@ -16,7 +16,7 @@ struct LSYSTEMSAMPLE_API FLTokenData : public FTableRowBase
     FString TokenID;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Token")
-    TSoftObjectPtr<UObject> LinkedObject;
+    TSoftClassPtr<UObject> LinkedClass;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Token")
     FString Description;    
