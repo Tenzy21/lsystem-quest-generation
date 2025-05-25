@@ -1,0 +1,37 @@
+name: Build Projects
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-cpp:
+    name: Build L-System Prototype
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Build lsystem-quest-generation.sln
+      run: msbuild lsystem-quest-generation.sln /p:Configuration=Release /p:Platform=x64
+
+  check-unreal:
+    name: Validate Unreal Project
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Check Unreal Project File
+      run: |
+        if not exist LSystemSample/LSystemSample.uproject (
+          echo "Error: Unreal project file not found!"
+          exit 1
+        )

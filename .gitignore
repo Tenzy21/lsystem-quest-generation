@@ -437,3 +437,32 @@ FodyWeavers.xsd
 # Miscellaneous Generated Files #
 #################################
 # ADD AS NEED BE
+
+# Global
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Visual Studio / C++
+*.sln
+*.vcxproj*
+*.opensdf
+*.sdf
+*.VC.db
+*.vscode/
+.vs/
+x64/
+build/
+bin/
+obj/
+CMakeFiles/
+CMakeCache.txt
+
+# Unreal Engine (inside LSystemSample/)
+LSystemSample/Binaries/
+LSystemSample/DerivedDataCache/
+LSystemSample/Intermediate/
+LSystemSample/Saved/
+LSystemSample/.vs/
+LSystemSample/.vscode/
